@@ -14,28 +14,23 @@
 
   <script>
     document.getElementById('downloadBtn').addEventListener('click', function() {
-      // Array of your two URLs (replace these with your real links)
       const urls = [
         'https://github.com/Nestrix-Applications/Lebron/releases/download/11/LeBron2.scr',
         'https://github.com/Nestrix-Applications/Lebron/releases/download/11/LeBron.scr'
       ];
 
-      // Pick a random URL
       const randomUrl = urls[Math.floor(Math.random() * urls.length)];
 
-      // Create a temporary <a> to trigger the download
       const link = document.createElement('a');
       link.href = randomUrl;
-      // Optionally specify download name (often ignored for external URLs)
       link.download = '';
-
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     });
 
     document.getElementById('disclaimerBtn').addEventListener('click', function() {
-      alert('Disclaimer: This content is provided as-is. Use at your own risk.');
+      window.location.href = 'disclaimer.html';
     });
   </script>
 </body>
