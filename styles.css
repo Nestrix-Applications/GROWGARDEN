@@ -1,0 +1,59 @@
+body {
+  /* Background image with 50% opacity using pseudo-element */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('lebron.png') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+h1 {
+  color: #552583; /* Lakers purple */
+  text-shadow: 2px 2px #FDB927; /* Lakers gold shadow */
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #FDB927; /* Lakers gold */
+  color: #552583; /* Lakers purple */
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0a41d;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
